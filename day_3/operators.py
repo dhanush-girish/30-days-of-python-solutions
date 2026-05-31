@@ -82,7 +82,7 @@ print(7 // 3 == int(2.7))
 
 print(type('10') == type(10))
 
-print(int(9.8) == 10
+print(int(9.8) == 10)
 
 #21. Write a script that prompts the user to enter hours and rate per hour. Calculate pay of the person?
 hour=int(input("Enter Hours : "))
