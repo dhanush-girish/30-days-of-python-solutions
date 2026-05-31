@@ -1,50 +1,75 @@
-#day 4
-#q1 to q22
-q1=['thirty','days','of','python']
+#Day 4 -30DaysOfPython 
+#Strings
+
+#question 1 to 4
+q1=['Thirty','days','of','python']
 result=' '.join(q1)
 print(result)
 
-q2=['coding','for','all']
+q2=['Coding','for','all']
 result_2=' '.join(q2)
 print(result_2)
 
-variable="coding for all"
-print(variable)
-length=len(variable)
-print(length)
-print(variable.upper())
-print(variable.lower())
-print(variable.capitalize())
-print(variable.title())
-print(variable.swapcase())
-print(variable.find('coding'))
-print(variable.index('coding'))
-print(variable.replace('coding',  'python'))
-print(variable.split(' '))
+company="Coding For All"
+print(company)
+
+#question 5 to 22
+print(len(company))
+print(company.upper())
+print(company.lower())
+
+print(company.capitalize())
+print(company.title())
+print(company.swapcase())
+
+print(company[:6])
+
+print(company.index('Coding'))
+print(company.find('Coding'))
+
+print(company.replace('Coding',  'Python'))
+print("Python For Everyone".replace("Everyone", "All"))
+
+print(company.split(' '))
+
 q14=("Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon")
 print(q14.split(', '))
-first_char = variable[0]
-print("Character at index 0:", first_char)
-print("last index: ",variable.rindex('l'))
-tenth_char = variable[10]
-print("Character at index 10: ", tenth_char)
-abbreviation_1='PFE'
-abbreviation_2='CFA'
-print(variable.index('c'))
-print(variable.index('f'))
-print(variable.rindex('l'))
 
-#q23 to #q30
+first_char = company[0]
+print("Character at index 0:", first_char)
+print("last index: ",company.rindex('l'))
+tenth_char = company[10]
+print("Character at index 10: ", tenth_char)
+
+phrase_1 = "Python For Everyone"
+words_1 = phrase_1.split()
+acronym_1 = "".join([word[0] for word in words_1])
+print(acronym_1)
+
+phrase_2 = "Coding For All"
+words_2 = phrase_2.split()
+acronym_2 = "".join([word[0] for word in words_2])
+print(acronym_2)
+
+print(company.index('C'))
+print(company.index('F'))
+print(company.rindex('l'))
+
+#question 23 to 29
 q_23='You cannot end a sentence with because because because is a conjunction'
 print(q_23.index('because'))
 print(q_23.rindex('because'))
-print(q_23.replace('because because because', ''))
-print(variable.startswith('coding'))
-print(variable.endswith('coding'))
+
+sliced_phrase = q_23[31:54]
+print(sliced_phrase)
+
+print(company.startswith('Coding'))
+print(company.endswith('coding'))
+
 q_30='   Coding For All      '
 print(q_30.strip())
 
-#q31 to
+#question 31 to 34
 q_31_a,q_31_b="30DaysOfPython","thirty_days_of_python"
 print(q_31_a.isidentifier())
 print(q_31_b.isidentifier())
@@ -68,7 +93,7 @@ x,y=8,6
 print("sum = %d + %d = %d "%(x,y,x+y))
 print("difference = %d - %d = %d "%(x,y,x-y))
 print("product = %d * %d = %d "%(x,y,x*y))
-print("division = %d / %d = %d "%(x,y,x/y))
+print("quotient = %d / %d = %.2f" % (x, y, x/y))
 print("remainder = %d %% %d = %d "%(x,y,x%y))
-print("fdivision = %d // %d = %d "%(x,y,x//y))
+print("floor division = %d // %d = %d "%(x,y,x//y))
 print("power = %d ** %d = %d "%(x,y,x**y))
