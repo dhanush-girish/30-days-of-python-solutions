@@ -17,7 +17,7 @@ Here's a quick summary of Day 7:
 **Converting**
 - `set(list)` → removes duplicates automatically, great for deduplication
 
-**Set Operations (Math-style)**
+**Set Operations (Math style)**
 - `union()` or `|` — all items from both sets
 - `intersection()` or `&` — only items common to both
 - `difference()` or `-` — items in one set but not the other
