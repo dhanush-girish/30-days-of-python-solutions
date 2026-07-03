@@ -67,4 +67,47 @@ for i  in range(101):
         total_sum_odd += i
 print(f"The sum of all evens is {total_sum_even}. And the sum of all odds is {total_sum_odd}.")
 
+#exercises: Level 3
+#question 1
+
+import countries 
+for country in countries.countries:
+    if 'land' in country:
+        print(country)
+
+#question 2
+fruits = ['banana', 'orange', 'mango', 'lemon']
+reversed_fruits = []
+for fruit in fruits:
+    reversed_fruits.insert(0, fruit)
+print(reversed_fruits)
+
 #question 3
+from countries_data import countries_data as c_data
+
+#What are the total number of languages in the data
+n_lang = 0
+for i in c_data:
+    n_lang += len(i["languages"])
+print(f"The total number of languages in the data is {n_lang}.")
+
+#Find the ten most spoken languages from the data
+language_count = {}
+for languages in c_data:
+    for lang in languages["languages"]:
+        if lang in language_count:
+            language_count[lang] += 1
+        else:
+            language_count[lang] = 1
+
+# Get the ten most spoken languages
+most_spoken = sorted(language_count.items(), key=lambda x: x[1], reverse=True)[:10]
+print("The ten most spoken languages are:")
+for lang, count in most_spoken:
+    print(f"{lang}: {count}")
+
+#Find the 10 most populated countries in the world
+populated_countries = sorted(c_data, key=lambda x: x["population"], reverse=True)[:10]
+print("The 10 most populated countries are:")
+for country in populated_countries:
+    print(f"{country['name']}: {country['population']}")
