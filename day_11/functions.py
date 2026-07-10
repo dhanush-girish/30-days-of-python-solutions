@@ -64,7 +64,66 @@ def solve_quadratic(a, b, c):
         root2 = (-b - discriminant**0.5) / (2*a)
         return f"Two real roots: {root1} and {root2}"
 
-#question 8
+#question 8 to 15
 def print_list(lst):
     for item in lst:
         print(item)
+
+def reverse_list(lst):
+    return lst[::-1]
+print(reverse_list([1, 2, 3, 4, 5]))
+print(reverse_list(["A", "B", "C"])) 
+
+def capitalize_list(items):
+    for i in items:
+        items[items.index(i)] = i.capitalize()
+    return items
+print(capitalize_list(["hello", "world"]))
+
+
+def add_item(lst, item):
+    lst.append(item)
+    return lst
+
+food_stuff = ['Potato', 'Tomato', 'Mango', 'Milk']
+numbers = [2, 3, 7, 9]
+print(add_item(food_stuff, "Meat"))
+print(add_item(numbers, 5))
+
+def remove_item(lst, item):
+    if item in lst:
+        lst.remove(item)
+    return lst
+
+food_stuff = ['Potato', 'Tomato', 'Mango', 'Milk']
+numbers = [2, 3, 7, 9]
+print(remove_item(food_stuff, "Mango"))
+print(remove_item(numbers, 3))
+
+def sum_of_numbers(numbers):
+    total = 0
+    for num in range(numbers+1):
+        total += num
+    return total
+
+print(sum_of_numbers(5))  
+print(sum_of_numbers(10)) 
+print(sum_of_numbers(100))  
+
+def sum_of_odds(number):
+    total = 0
+    for num in range(number + 1):
+        if num % 2 != 0:
+            total += num
+    return total
+print(sum_of_odds(5))
+
+def sum_of_evens(number):
+    total = 0
+    for num in range(number + 1):
+        if num % 2 == 0:
+            total += num
+    return total
+print(sum_of_evens(5))
+
+#Exercises: Level 2
