@@ -127,3 +127,64 @@ def sum_of_evens(number):
 print(sum_of_evens(5))
 
 #Exercises: Level 2
+
+#question 1
+def evens_and_odds(num):
+    evens = 0
+    odds = 0
+    for i in range(num + 1):
+        if i % 2 == 0:
+            evens += 1
+        else:
+            odds += 1
+    return f"The number of evens is {evens} and the number of odds is {odds}"
+print(evens_and_odds(100))
+
+#question 2
+def factorial(n):
+    fac = 1
+    for i in range (1, n + 1):
+        fac *= i
+    return fac
+print(factorial(3))
+
+#question 3
+def calculate_mean(lst):
+    mean = sum(lst) / len(lst) if len(lst) > 0 else 0
+    return mean
+
+def calculate_median(lst):
+    median = sorted(lst)[len(lst) // 2] if len(lst) > 0 else 0
+    return median
+
+def calculate_mode(lst):
+    from collections import Counter
+    if len(lst) == 0:
+        return None
+    count = Counter(lst)
+    mode_data = count.most_common(1)
+    return mode_data[0][0] if mode_data else None
+
+def calculate_range(lst):
+    if len(lst) == 0:
+        return 0
+    return max(lst) - min(lst)
+
+def calculate_variance(lst):
+    if len(lst) == 0:
+        return 0
+    mean = calculate_mean(lst)
+    variance = sum((x - mean) ** 2 for x in lst) / len(lst)
+    return variance
+
+def calculate_std_deviation(lst):
+    variance = calculate_variance(lst)
+    std_deviation = variance ** 0.5
+    return std_deviation
+
+print(calculate_mean([1, 2, 3, 4, 5]))
+print(calculate_median([1, 2, 3, 4, 5]))
+print(calculate_mode([1, 2, 2, 3, 3, 3]))
+print(calculate_range([1, 2, 3, 4, 5]))
+print(calculate_variance([1, 2, 3, 4, 5]))
+print(calculate_std_deviation([1, 2, 3, 4, 5]))
