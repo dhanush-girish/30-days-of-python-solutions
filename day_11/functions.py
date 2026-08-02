@@ -128,7 +128,7 @@ print(sum_of_evens(5))
 
 #Exercises: Level 2
 
-#question 1
+#question 1: Declare a function named evens_and_odds . It takes a positive integer as parameter and it counts number of evens and odds in the number.
 def evens_and_odds(num):
     evens = 0
     odds = 0
@@ -140,7 +140,7 @@ def evens_and_odds(num):
     return f"The number of evens is {evens} and the number of odds is {odds}"
 print(evens_and_odds(100))
 
-#question 2
+#question 2: Call your function factorial, it takes a whole number as a parameter and it return a factorial of the number
 def factorial(n):
     fac = 1
     for i in range (1, n + 1):
@@ -148,7 +148,7 @@ def factorial(n):
     return fac
 print(factorial(3))
 
-#question 3
+#question 3: Write different functions which take lists. They should calculate_mean, calculate_median, calculate_mode, calculate_range, calculate_variance, calculate_std (standard deviation).Call your function is_empty, it takes a parameter and it checks if it is empty or not
 def calculate_mean(lst):
     mean = sum(lst) / len(lst) if len(lst) > 0 else 0
     return mean
@@ -188,3 +188,49 @@ print(calculate_mode([1, 2, 2, 3, 3, 3]))
 print(calculate_range([1, 2, 3, 4, 5]))
 print(calculate_variance([1, 2, 3, 4, 5]))
 print(calculate_std_deviation([1, 2, 3, 4, 5]))
+
+#question 4: Write a function called greet which takes a default argument, name. If no argument is supplied it should print "Hello, Guest!", otherwise it should greet the person by name.
+def greet(name):
+    if not name:
+        return "Hello, Guest!"
+    else:
+        return f"Hello, {name}!"
+print(greet(input("Enter your name: ")))
+
+#question 5: Create a function called show_args to take an arbitrary number of named arguments and print their names and values.
+def show_args(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+show_args(name="Alice", age=30, city="New York")
+show_args(name="Bob", pet="Fluffy, the bunny")
+
+#Exercises: Level 3
+
+#question 1
+def is_prime(num):
+    if num <= 1:
+        return False
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+print(is_prime(int(input("Enter a number to check if it's prime: "))))  
+
+#question 2
+def is_unique(lst):
+    return len(lst) == len(set(lst))
+print(is_unique([1, 2, 3, 4, 5]))  
+print(is_unique([1, 2, 2, 4, 5]))  
+
+#question 3
+def same_data_type(lst):
+    if len(lst) == 0:
+        return True
+    
+    types_in_list = set(type(item) for item in lst)
+    
+    return len(types_in_list) == 1
+
+print(same_data_type([1, 2, 3]))            
+print(same_data_type(['a', 'b', 'c']))      
+print(same_data_type([1, 2, "apple", 4]))
