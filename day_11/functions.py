@@ -234,3 +234,19 @@ def same_data_type(lst):
 print(same_data_type([1, 2, 3]))            
 print(same_data_type(['a', 'b', 'c']))      
 print(same_data_type([1, 2, "apple", 4]))
+
+#question 4
+def is_valid_variable(var_name):
+    import keyword
+    if not var_name.isidentifier() or keyword.iskeyword(var_name):
+        return False
+    return True
+print(is_valid_variable("my_var"))  
+print(is_valid_variable("def"))  
+print(is_valid_variable("2nd_var"))
+
+#question 5
+
+#Create a function called the most_spoken_languages in the world. It should return 10 or 20 most spoken languages in the world in descending order.
+def most_spoken_languages():
+    
